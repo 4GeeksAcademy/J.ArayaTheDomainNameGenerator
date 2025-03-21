@@ -49,6 +49,3 @@ function hacerDomainHack(palabra) {
 }
 
 posiblNomDominio()
-
-// let prueba = hacerDomainHack("palabra")
-// console.log(prueba)
