@@ -1,11 +1,34 @@
-import "bootstrap";
-import "./style.css";
+
+// window.onload = function () {
+
+//   }
 
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+let pronoun = ['the', 'our'];
+let adj = ['great', 'big'];
+let noun = ['jogger', 'racoon'];
+let topLevelDomains = ['.com', '.net', '.us', '.io']
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
+
+
+function posiblNomDominio() {
+  
+  let listaDeOpciones = [];
+  let cont = 0;
+
+  for (let i = 0; i < pronoun.length; i++) {
+    let nomDominioFinal = '';
+    for (let j = 0; j < adj.length; j++) {
+      for (let x = 0; x < noun.length; x++) {
+        nomDominioFinal += pronoun[i] +adj[j] +noun[x] + topLevelDomains[Math.floor(Math.random()*topLevelDomains.length)];
+        listaDeOpciones.push(nomDominioFinal)
+        cont++
+        console.log(cont+" "+nomDominioFinal)
+        nomDominioFinal = '';
+      }   
+    }
+  }
+  return listaDeOpciones
+}
+
+posiblNomDominio()
